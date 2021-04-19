@@ -7,6 +7,8 @@ namespace RelembrandoArraysDotNet
     {
         static void Main(string[] args)
         {
+            #region documentacao
+            /*
             #region declaracao_array
             int[] a = new int[2];
             var a2 = new int[2];
@@ -38,7 +40,30 @@ namespace RelembrandoArraysDotNet
             {
                 Console.WriteLine(nome);
             }
+            #endregion*/
             #endregion
+            var frutas = new List<string>();
+
+            frutas.Add("Macã");
+            frutas.Add("Morango");
+            frutas.Add("Laranja");
+
+            frutas.Clear();
+
+            frutas.Add("Acerola");
+            var contemLaranja = frutas.Contains("Laranja") ? "É verdade esse bilhete" : "Tudo errado isso aí"; //retorna false, lembrando que limpei a lista
+            Console.WriteLine(contemLaranja);
+
+            frutas.Find(e => e == "Acerola"); //Validando se encontra elemento dentro da lista;
+
+            frutas.FindAll(e => e == "Ac");
+
+            Console.WriteLine(frutas.RemoveAll(e => e == "Acerola")); 
+
+            foreach(var fruta in frutas)
+            {
+                Console.WriteLine(fruta);
+            }
         }
     }
 }
