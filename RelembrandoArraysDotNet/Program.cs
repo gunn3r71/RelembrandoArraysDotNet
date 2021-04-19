@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RelembrandoArraysDotNet
 {
@@ -22,6 +23,20 @@ namespace RelembrandoArraysDotNet
             foreach (var n in a2)
             {
                 Console.WriteLine(n);
+            }
+            #endregion
+
+            #region declaracao_lista
+            List<string> nomes = new List<string>();
+            #endregion
+            #region atribuindo_valores
+            nomes.Add("Lucas");
+            nomes.Add("Taty");
+            #endregion
+            #region lendo_valores
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine(nome);
             }
             #endregion
         }
